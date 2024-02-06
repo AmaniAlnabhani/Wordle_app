@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wordle_app/componets/grid.dart';
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -11,7 +12,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('wordle'),
+        title: const Text('wordle'),
         centerTitle: true,
         elevation: 0 ,
       ),
@@ -20,12 +21,13 @@ class _HomePageState extends State<HomePage> {
           flex: 7,
           child: Container(
            color: Colors.amber,
+           child:const Grid(),
           ),
         ),
         Expanded(
           flex: 4,
           child: Container(
-           color: Color.fromARGB(255, 3, 153, 40),
+           color: const Color.fromARGB(255, 3, 153, 40),
           ),
         ),
       ],),
